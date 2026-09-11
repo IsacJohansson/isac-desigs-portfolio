@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (copyEmailBtn) {
     copyEmailBtn.addEventListener('click', () => {
-      const email = "isacmirestrand@gmail.com";
+      const email = "isac.johanssonmusic@gmail.com";
       navigator.clipboard.writeText(email).then(() => {
         if (toast) {
           toast.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
