@@ -24,7 +24,7 @@ export async function onRequestPost(context) {
     // Resend requires a verified sender domain. 'onboarding@resend.dev' works for testing if you send to the verified email.
     const resendPayload = {
       from: 'Acme <onboarding@resend.dev>',
-      to: ['Isac.Johanssonmusic@gmail.com'],
+      to: ['isac.johanssonmusic@gmail.com'],
       subject: `New Portfolio Inquiry from ${name}`,
       html: emailHtml,
       reply_to: email,
