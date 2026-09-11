@@ -788,17 +788,17 @@
           <form id="contact-form" class="space-y-6">
             <div>
               <label class="text-xs font-semibold text-nordic-muted uppercase block mb-2" data-i18n="contactFormName">YOUR NAME / COMPANY</label>
-              <input type="text" required class="w-full bg-slate-50 border border-nordic-border rounded-xl p-4 text-sm text-nordic-text focus:border-nordic-accent focus:bg-white focus:outline-none transition-colors" data-i18n="contactFormNamePlaceholder" placeholder="Company Ltd / Your Name">
+              <input type="text" name="name" required class="w-full bg-slate-50 border border-nordic-border rounded-xl p-4 text-sm text-nordic-text focus:border-nordic-accent focus:bg-white focus:outline-none transition-colors" data-i18n="contactFormNamePlaceholder" placeholder="Company Ltd / Your Name">
             </div>
 
             <div>
               <label class="text-xs font-semibold text-nordic-muted uppercase block mb-2" data-i18n="contactFormEmail">YOUR EMAIL ADDRESS</label>
-              <input type="email" required class="w-full bg-slate-50 border border-nordic-border rounded-xl p-4 text-sm text-nordic-text focus:border-nordic-accent focus:bg-white focus:outline-none transition-colors" data-i18n="contactFormEmailPlaceholder" placeholder="name@company.com">
+              <input type="email" name="email" required class="w-full bg-slate-50 border border-nordic-border rounded-xl p-4 text-sm text-nordic-text focus:border-nordic-accent focus:bg-white focus:outline-none transition-colors" data-i18n="contactFormEmailPlaceholder" placeholder="name@company.com">
             </div>
 
             <div>
               <label class="text-xs font-semibold text-nordic-muted uppercase block mb-2" data-i18n="contactFormService">HOW CAN I HELP YOU?</label>
-              <select class="w-full bg-slate-50 border border-nordic-border rounded-xl p-4 text-sm text-nordic-text focus:border-nordic-accent focus:bg-white focus:outline-none transition-colors">
+              <select name="service" class="w-full bg-slate-50 border border-nordic-border rounded-xl p-4 text-sm text-nordic-text focus:border-nordic-accent focus:bg-white focus:outline-none transition-colors">
                 <option data-i18n="optService1">Bespoke Website & Design</option>
                 <option data-i18n="optService2">Technical SEO & Search Optimization</option>
                 <option data-i18n="optService3">Headless CMS & Performance</option>
@@ -808,7 +808,7 @@
 
             <div>
               <label class="text-xs font-semibold text-nordic-muted uppercase block mb-2" data-i18n="contactFormMessage">PROJECT DETAILS</label>
-              <textarea rows="4" required class="w-full bg-slate-50 border border-nordic-border rounded-xl p-4 text-sm text-nordic-text focus:border-nordic-accent focus:bg-white focus:outline-none transition-colors" data-i18n="contactFormMessagePlaceholder" placeholder="Describe your project goals and requirements..."></textarea>
+              <textarea name="message" rows="4" required class="w-full bg-slate-50 border border-nordic-border rounded-xl p-4 text-sm text-nordic-text focus:border-nordic-accent focus:bg-white focus:outline-none transition-colors" data-i18n="contactFormMessagePlaceholder" placeholder="Describe your project goals and requirements..."></textarea>
             </div>
 
             <button type="submit" class="w-full py-4 bg-nordic-accent hover:bg-nordic-accent-hover text-white font-bold text-sm tracking-wide rounded-xl shadow-lg shadow-blue-500/20 transition-all" data-magnetic="true">

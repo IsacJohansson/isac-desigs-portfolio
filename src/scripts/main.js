@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const formSuccess = document.getElementById('form-success-msg');
 
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       if (submitBtn) {
@@ -230,17 +230,45 @@ document.addEventListener('DOMContentLoaded', () => {
         i18n.setLanguage(i18n.currentLang);
       }
 
-      setTimeout(() => {
-        contactForm.reset();
+      try {
+        const formData = new FormData(contactForm);
+        const data = Object.fromEntries(formData.entries());
+
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+
+        if (response.ok) {
+          contactForm.reset();
+          if (formSuccess) {
+            formSuccess.classList.remove('hidden');
+            formSuccess.className = 'mt-4 p-4 bg-green-50 border border-green-200 text-green-700 rounded-xl text-xs font-semibold';
+            formSuccess.innerHTML = '<span data-i18n="contactSuccessMsg">Tack för ditt meddelande! Jag återkopplar så snart jag kan.</span>';
+            i18n.setLanguage(i18n.currentLang);
+            setTimeout(() => formSuccess.classList.add('hidden'), 5000);
+          }
+        } else {
+          throw new Error('Failed to send');
+        }
+      } catch (err) {
+        console.error(err);
+        if (formSuccess) {
+          formSuccess.classList.remove('hidden');
+          formSuccess.className = 'mt-4 p-4 bg-red-50 border border-red-200 text-red-600 rounded-xl text-xs font-semibold';
+          formSuccess.innerHTML = '<span>Failed to send message. Please try again later.</span>';
+          setTimeout(() => formSuccess.classList.add('hidden'), 5000);
+        }
+      } finally {
         if (submitBtn) {
           submitBtn.innerHTML = `<span data-i18n="contactSubmitBtn">SKICKA FÖRFRÅGAN</span>`;
           submitBtn.disabled = false;
+          i18n.setLanguage(i18n.currentLang);
         }
-        if (formSuccess) {
-          formSuccess.classList.remove('hidden');
-          setTimeout(() => formSuccess.classList.add('hidden'), 5000);
-        }
-      }, 1000);
+      }
     });
   }
 
