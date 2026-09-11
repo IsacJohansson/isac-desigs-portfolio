@@ -1,0 +1,317 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-nordic: #fafafa;
+    --bg-paper: #ffffff;
+    --border-color: #e2e8f0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-nordic);
+    color: #0f172a;
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  }
+
+  .font-syne {
+    font-family: 'Syne', sans-serif;
+  }
+
+  ::selection {
+    background-color: #2563eb;
+    color: #ffffff;
+  }
+
+  /* Sleek Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #fafafa;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2563eb;
+  }
+}
+
+/* Premium macOS Frosted Glass Header Nav */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.7);
+  box-shadow: 
+    0 4px 20px rgba(15, 23, 42, 0.02),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.glass-nav.is-scrolled {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(28px) saturate(200%);
+  -webkit-backdrop-filter: blur(28px) saturate(200%);
+  border-bottom: 1px solid rgba(203, 213, 225, 0.75);
+  box-shadow: 
+    0 10px 30px -10px rgba(15, 23, 42, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+/* Clean Scandinavian Cards */
+.scandi-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scandi-card:hover {
+  border-color: #94a3b8;
+  transform: translateY(-4px);
+  box-shadow: 0 20px 30px -10px rgba(15, 23, 42, 0.1);
+}
+
+/* Browser Window Pre-Window Frame */
+.browser-window {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+}
+
+.browser-header {
+  background: #f1f5f9;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.browser-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.browser-url {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 3px 12px;
+  font-size: 11px;
+  color: #475569;
+  font-family: 'Inter', monospace;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  max-width: 240px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Simulated Video Scroll Viewport */
+.video-scroll-viewport {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  background: #f8fafc;
+}
+
+.video-scroll-track {
+  width: 100%;
+  will-change: transform;
+  animation: videoScrollLoop 14s ease-in-out infinite alternate;
+}
+
+.video-scroll-viewport:hover .video-scroll-track {
+  animation-play-state: paused;
+}
+
+@keyframes videoScrollLoop {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  15% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -60%, 0);
+  }
+  65% {
+    transform: translate3d(0, -60%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+.scandi-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.725rem;
+  font-weight: 600;
+  color: #334155;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
+}
+
+/* Custom Studio Cursor (Refined Nordic Minimalist) */
+@media (pointer: fine) {
+  body {
+    cursor: none !important;
+  }
+  a, button, input, textarea, select, [role="button"], .project-card {
+    cursor: none !important;
+  }
+}
+
+.cursor-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  border: 1.25px solid rgba(15, 23, 42, 0.22);
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  will-change: transform;
+  transition: width 0.22s cubic-bezier(0.16, 1, 0.3, 1), height 0.22s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, background-color 0.2s ease, backdrop-filter 0.2s ease;
+}
+
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  background-color: #0f172a;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  will-change: transform;
+  transition: background-color 0.2s ease, scale 0.2s ease;
+}
+
+.cursor-hover .cursor-follower {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(15, 23, 42, 0.05);
+  border-color: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.cursor-hover .cursor-dot {
+  background-color: #0f172a;
+}
+
+/* Ambient Gentle Botanical Sway & Float Animation */
+@keyframes floatSway {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-8px) rotate(1.2deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-6px) rotate(-1.2deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.animate-botanical {
+  animation: floatSway 7s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Tree Branch Drawing & Growth Animations */
+.tree-branch {
+  stroke-dasharray: 140;
+  stroke-dashoffset: 140;
+  animation: growBranch 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.trunk { animation-delay: 0.05s; }
+.branch-1 { animation-delay: 0.25s; }
+.branch-2 { animation-delay: 0.45s; }
+.branch-3 { animation-delay: 0.35s; }
+.branch-4 { animation-delay: 0.25s; }
+.branch-5 { animation-delay: 0.45s; }
+.branch-6 { animation-delay: 0.35s; }
+.branch-7 { animation-delay: 0.2s; }
+
+@keyframes growBranch {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Leaves Pop & Flourish Animation */
+.leaf {
+  transform: scale(0);
+  transform-origin: center;
+  animation: leafPop 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.leaf-1 { animation-delay: 0.65s; }
+.leaf-2 { animation-delay: 0.85s; }
+.leaf-3 { animation-delay: 0.75s; }
+.leaf-4 { animation-delay: 0.65s; }
+.leaf-5 { animation-delay: 0.85s; }
+.leaf-6 { animation-delay: 0.75s; }
+.leaf-7 { animation-delay: 0.6s; }
+.leaf-8 { animation-delay: 0.7s; }
+
+@keyframes leafPop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.95;
+  }
+}
+
+.tree-pot {
+  transform: translateY(12px);
+  opacity: 0;
+  animation: potRise 0.5s ease-out forwards;
+}
+
+@keyframes potRise {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Isac Designs — Web Architect & Technical SEO Specialist</title>
+  <meta name="description" content="Web architect and technical SEO specialist. Helping businesses grow through fast, secure, bespoke digital platforms engineered for #1 Google rankings.">
+  <meta name="keywords" content="Isac Designs, Web Architect, Fullstack Developer, Technical SEO, Core Web Vitals, Spain, Europe">
+  <meta name="author" content="Isac Designs">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Isac Designs — Web Architecture & Search Dominance">
+  <meta property="og:description" content="High-performance bespoke web platforms and technical SEO strategies.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Favicon Links (Botanical Tree) -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/favicon.png">
+
+  <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body class="bg-nordic-bg text-nordic-text antialiased selection:bg-nordic-accent selection:text-white overflow-x-hidden relative">
+
+  <!-- Page Preloader / Organic Growing Tree & Particle Screen -->
+  <div id="page-preloader" class="fixed inset-0 z-[99999] bg-white flex flex-col items-center justify-center transition-opacity duration-800 overflow-hidden">
+    
+    <!-- Ambient Particles Canvas for Preloader -->
+    <canvas id="preloader-canvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-60"></canvas>
+    
+    <div class="relative flex flex-col items-center z-10">
+      
+      <!-- Animated Growing Tree Container -->
+      <div class="relative w-56 h-56 mb-2 flex items-center justify-center">
+        <!-- SVG Organic Growing Tree -->
+        <svg id="growing-tree-svg" class="w-full h-full text-slate-900" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          
+          <!-- Pot / Base -->
+          <path class="tree-pot" d="M78 172 L122 172 L126 156 L74 156 Z" fill="#0f172a" stroke="none" />
+          
+          <!-- Main Trunk -->
+          <path class="tree-branch trunk" d="M100 156 C100 130 98 110 100 78" stroke-width="4.5" />
+          
+          <!-- Left Primary Branch -->
+          <path class="tree-branch branch-1" d="M100 122 C84 106 68 100 52 84" stroke-width="3.2" />
+          <!-- Left Secondary Branch -->
+          <path class="tree-branch branch-2" d="M70 96 C58 82 46 80 34 68" stroke-width="2.2" />
+          <!-- Left Top Branch -->
+          <path class="tree-branch branch-3" d="M100 96 C86 80 72 68 62 48" stroke-width="2.5" />
+
+          <!-- Right Primary Branch -->
+          <path class="tree-branch branch-4" d="M100 118 C116 102 132 96 148 80" stroke-width="3.2" />
+          <!-- Right Secondary Branch -->
+          <path class="tree-branch branch-5" d="M128 92 C140 78 152 75 164 64" stroke-width="2.2" />
+          <!-- Right Top Branch -->
+          <path class="tree-branch branch-6" d="M100 90 C114 74 128 64 138 44" stroke-width="2.5" />
+
+          <!-- Top Sprout Branch -->
+          <path class="tree-branch branch-7" d="M100 78 C98 58 102 42 100 26" stroke-width="3" />
+
+          <!-- Unfolding Leaves (Animated Scale & Elastic Flourish) -->
+          <g class="tree-leaves" fill="#0f172a">
+            <!-- Left Leaves -->
+            <path class="leaf leaf-1" d="M52 84 C38 78 30 65 42 56 C52 56 56 68 52 84 Z" />
+            <path class="leaf leaf-2" d="M34 68 C20 62 14 52 24 44 C34 44 38 54 34 68 Z" />
+            <path class="leaf leaf-3" d="M62 48 C48 40 42 28 54 21 C64 22 68 34 62 48 Z" />
+
+            <!-- Right Leaves -->
+            <path class="leaf leaf-4" d="M148 80 C162 74 170 61 158 53 C148 53 144 65 148 80 Z" />
+            <path class="leaf leaf-5" d="M164 64 C178 58 184 48 174 40 C164 40 160 50 164 64 Z" />
+            <path class="leaf leaf-6" d="M138 44 C152 36 156 24 144 17 C134 18 132 30 138 44 Z" />
+
+            <!-- Top Center Leaves -->
+            <path class="leaf leaf-7" d="M100 26 C86 16 88 4 100 0 C112 4 114 16 100 26 Z" />
+            <path class="leaf leaf-8" d="M100 54 C84 44 80 30 95 26 C105 28 108 40 100 54 Z" />
+          </g>
+
+        </svg>
+      </div>
+
+      <!-- Typography -->
+      <div class="font-syne font-extrabold text-2xl tracking-tight text-slate-900 mb-1.5">
+        ISAC DESIGNS
+      </div>
+      <div class="flex items-center gap-2 text-[11px] font-semibold text-slate-400 uppercase tracking-widest mb-4">
+        <span class="w-1.5 h-1.5 rounded-full bg-slate-900 animate-ping"></span>
+        <span data-i18n="preloaderText">GROWING EXPERIENCE...</span>
+      </div>
+
+      <!-- Progress Line -->
+      <div class="w-48 h-1 bg-slate-100 rounded-full overflow-hidden border border-slate-200/80">
+        <div id="preloader-bar" class="h-full bg-slate-900 w-0 transition-all duration-1000 ease-out"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Ambient Background Canvas -->
+  <canvas id="techno-canvas" class="fixed inset-0 w-full h-full pointer-events-none z-[0] opacity-80"></canvas>
+
+  <!-- Custom Cursor -->
+  <div id="cursor-follower" class="cursor-follower hidden md:block"></div>
+  <div id="cursor-dot" class="cursor-dot hidden md:block"></div>
+
+  <!-- Toast Notification -->
+  <div id="toast-notification" class="fixed bottom-8 right-8 z-[10000] bg-white px-6 py-4 border-l-4 border-nordic-accent flex items-center gap-3 shadow-2xl transition-all duration-300 opacity-0 translate-y-4 pointer-events-none rounded-xl border border-nordic-border">
+    <div class="w-2.5 h-2.5 rounded-full bg-nordic-accent animate-pulse"></div>
+    <span class="text-xs font-medium tracking-wide text-nordic-text" data-i18n="emailCopiedToast">Email address copied to clipboard!</span>
+  </div>
+
+  <!-- Main Layout -->
+  <div class="relative z-[10] flex flex-col min-h-screen">
+
+    <!-- Header Navigation with Custom Graphical Badges -->
+    <header class="sticky top-0 z-[50] glass-nav transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        
+        <!-- Brand Title (Syne Typography) -->
+        <a href="#hero" class="flex flex-col group" data-magnetic="true">
+          <span class="font-syne font-extrabold text-lg sm:text-xl tracking-tight text-nordic-text group-hover:text-nordic-accent transition-colors leading-none mb-1">
+            ISAC DESIGNS
+          </span>
+          <span class="text-[11px] text-nordic-muted font-medium tracking-wide flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-nordic-emerald animate-pulse"></span>
+            <span data-i18n="navStatus">AVAILABLE 2026</span>
+          </span>
+        </a>
+
+        <!-- Quick Links -->
+        <nav class="hidden md:flex items-center gap-8 text-xs font-semibold tracking-wide uppercase">
+          <a href="#projects" class="text-nordic-muted hover:text-nordic-accent transition-colors">
+            <span data-i18n="navProjects">Projekt [09]</span>
+          </a>
+          <a href="#services" class="text-nordic-muted hover:text-nordic-accent transition-colors">
+            <span data-i18n="navServices">Expertis</span>
+          </a>
+          <a href="#about" class="text-nordic-muted hover:text-nordic-accent transition-colors">
+            <span data-i18n="navAbout">Om mig</span>
+          </a>
+          <a href="#contact" class="text-nordic-muted hover:text-nordic-accent transition-colors">
+            <span data-i18n="navContact">Kontakt</span>
+          </a>
+        </nav>
+
+        <!-- Multi-language Switcher (SV / EN / ES) -->
+        <div class="flex items-center gap-1 bg-white p-1 rounded-xl border border-nordic-border text-xs font-semibold shadow-sm">
+          <button data-lang-toggle="sv" class="px-3 py-1 rounded-lg transition-all duration-200" title="Svenska">SV</button>
+          <button data-lang-toggle="en" class="px-3 py-1 rounded-lg transition-all duration-200" title="English">EN</button>
+          <button data-lang-toggle="es" class="px-3 py-1 rounded-lg transition-all duration-200" title="Español">ES</button>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- HERO SECTION WITH FITTING GRAPHICAL BACKGROUND -->
+    <section id="hero" class="relative pt-12 pb-16 px-6 sm:px-10 lg:px-12 max-w-7xl mx-auto w-full my-6 rounded-3xl overflow-hidden border border-slate-200/80 shadow-xl shadow-slate-900/5">
+      
+      <!-- Generated Scandinavian Background Image & Gradient Overlay -->
+      <div class="absolute inset-0 -z-10 pointer-events-none">
+        <img src="/images/hero-bg.jpg" alt="Scandinavian Hero Background" class="w-full h-full object-cover object-right opacity-90" />
+        <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/40"></div>
+      </div>
+      
+
+      <!-- Main Headline, Copy & Botanical Illustration Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center py-6">
+        
+        <!-- Left Column: Headline & Copy -->
+        <div class="lg:col-span-7 pr-0 lg:pr-4">
+          <h1 class="font-syne font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-[3.6rem] xl:text-[4.6rem] leading-[1.05] tracking-tight text-nordic-text my-4">
+            ISAC <span class="text-nordic-accent">DESIGNS</span>
+          </h1>
+
+          <p class="max-w-2xl text-lg sm:text-xl text-nordic-muted leading-relaxed font-normal mt-6" data-i18n="heroSubtitle">
+            Web architect and technical SEO specialist. I help ambitious businesses grow through fast, secure, bespoke digital platforms engineered to achieve #1 rankings on Google.
+          </p>
+
+          <!-- Single High-Contrast Primary CTA Button -->
+          <div class="mt-8">
+            <a href="#contact" class="px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm tracking-wide rounded-xl shadow-xl shadow-slate-900/10 transition-all transform hover:-translate-y-0.5 inline-flex items-center gap-2" data-magnetic="true">
+              <span data-i18n="heroCtaSecondary">Schedule A Call</span> →
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Scandinavian Monochrome Botanical Art with Ambient Float Animation -->
+        <div class="lg:col-span-5 flex justify-center lg:justify-end">
+          <div class="relative w-full max-w-sm p-4 bg-white/80 backdrop-blur-md rounded-2xl border border-slate-200/90 shadow-xl group transform hover:scale-[1.03] transition-all duration-300 animate-botanical">
+            <img src="/images/botanical-art.jpg" alt="Scandinavian Botanical Line Art" class="w-full h-auto object-contain rounded-xl mix-blend-multiply opacity-95 group-hover:opacity-100 transition-opacity" />
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CORE VALUE & EXPERTISE SECTION -->
+    <section id="services" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+      <div class="mb-16">
+        <div class="text-xs font-bold text-nordic-accent tracking-wider uppercase mb-2" data-i18n="pillarsBadge">// EXPERTISE & GOALS</div>
+        <h2 class="font-extrabold text-4xl sm:text-6xl text-nordic-text tracking-tight" data-i18n="pillarsTitle">
+          TROLIGA MÅL, BEVISADE RESULTAT
+        </h2>
+        <p class="text-nordic-muted text-lg max-w-2xl mt-3 font-normal" data-i18n="pillarsSubtitle">
+          Tre pelare som säkerställer din digitala investering och långsiktiga tillväxt.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Pillar 1 -->
+        <div class="scandi-card p-8 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-slate-100 text-slate-900 font-extrabold text-lg flex items-center justify-center mb-6 border border-slate-200">
+              01
+            </div>
+            <h3 class="font-bold text-xl text-nordic-text mb-3" data-i18n="pillar1Title">
+              Skräddarsydd Frontend & UI/UX
+            </h3>
+            <p class="text-nordic-muted text-sm leading-relaxed mb-6 font-normal" data-i18n="pillar1Desc">
+              Genomtänkt användarupplevelse och stilren design som stärker ditt varumärke. Snabb laddningstid och 100% mobilanpassning.
+            </p>
+          </div>
+          <ul class="text-xs text-nordic-muted space-y-2.5 border-t border-nordic-border pt-5">
+            <li class="flex items-center gap-2">
+              <span class="text-nordic-emerald font-bold">✓</span> <span data-i18n="pillar1Item1">Skräddarsydd design utan mallbegränsningar</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-nordic-emerald font-bold">✓</span> <span data-i18n="pillar1Item2">Responsiv och tillgänglig på alla enheter</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-nordic-emerald font-bold">✓</span> <span data-i18n="pillar1Item3">Blixtsnabb laddning som behåller besökare</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="scandi-card p-8 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-slate-100 text-slate-900 font-extrabold text-lg flex items-center justify-center mb-6 border border-slate-200">
+              02
+            </div>
+            <h3 class="font-bold text-xl text-nordic-text mb-3" data-i18n="pillar2Title">
+              Skalbar Backend & Hög Säkerhet
+            </h3>
+            <p class="text-nordic-muted text-sm leading-relaxed mb-6 font-normal" data-i18n="pillar2Desc">
+              Stabil och trygg teknisk grund med moderna API:er, headless CMS och bergfast infrastruktur byggd för framtiden.
+            </p>
+          </div>
+          <ul class="text-xs text-nordic-muted space-y-2.5 border-t border-nordic-border pt-5">
+            <li class="flex items-center gap-2">
+              <span class="text-nordic-emerald font-bold">✓</span> <span data-i18n="pillar2Item1">Enkel innehållshantering med Headless CMS</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-nordic-emerald font-bold">✓</span> <span data-i18n="pillar2Item2">Hög datasäkerhet och automatiska backup-rutiner</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-nordic-emerald font-bold">✓</span> <span data-i18n="pillar2Item3">Blixtsnabba integrationer och API-lösningar</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="scandi-card p-8 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-slate-100 text-slate-900 font-extrabold text-lg flex items-center justify-center mb-6 border border-slate-200">
+              03
+            </div>
+            <h3 class="font-bold text-xl text-nordic-text mb-3" data-i18n="pillar3Title">
+              Sökordsdominans & Teknisk SEO
+            </h3>
+            <p class="text-nordic-muted text-sm leading-relaxed mb-6 font-normal" data-i18n="pillar3Desc">
+              Strukturerad optimering som gör att ditt företag syns för rätt kunder vid rätt tillfälle när de söker på Google.
+            </p>
+          </div>
+          <ul class="text-xs text-nordic-muted space-y-2.5 border-t border-nordic-border pt-5">
+            <li class="flex items-center gap-2">
+              <span class="text-nordic-emerald font-bold">✓</span> <span data-i18n="pillar3Item1">100/100 Core Web Vitals prestanda</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-nordic-emerald font-bold">✓</span> <span data-i18n="pillar3Item2">Lokal och nationell sökordsstrategi</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-nordic-emerald font-bold">✓</span> <span data-i18n="pillar3Item3">Semantisk struktur för maximal synlighet</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SHOWCASE (9 Real Live Website Screenshots with Auto-Scroll Pre-Windows) -->
+    <section id="projects" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+      
+      <!-- Header & Filter Tabs -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <div class="text-xs font-bold text-nordic-accent tracking-wider uppercase mb-2" data-i18n="projectsBadge">// CLIENT PROJECTS & LIVE DEMOS</div>
+          <h2 class="font-extrabold text-4xl sm:text-6xl text-nordic-text tracking-tight" data-i18n="projectsTitle">
+            UTVALDA PROJEKT & FALLSTUDIER
+          </h2>
+          <p class="text-nordic-muted text-lg max-w-xl mt-2 font-normal" data-i18n="projectsSubtitle">
+            Utforska 9 verifierade kundprojekt med reella automatiska skärminspelningar av varje levande hemsida.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- 9 Projects Grid with REAL Live Website Screenshots & Video Auto-Scroll -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- [01] Creactive Adventure -->
+        <div class="project-card scandi-card overflow-hidden flex flex-col justify-between" 
+             data-category="brand seo"
+             data-name="Creactive Adventure"
+             data-cat="Upplevelser & Bokning"
+             data-desc="Moderne och inspirerande äventyrsportal med integrerat bokningssystem och hög konverteringsgrad."
+             data-url="https://www.creactive-adventure.se/"
+             data-img="/thumbnails/creactive.png">
+          <!-- Video Scroll Browser Window Frame -->
+          <div class="p-4 bg-slate-100 border-b border-nordic-border">
+            <div class="browser-window">
+              <div class="browser-header">
+                <div class="browser-dot bg-red-400"></div>
+                <div class="browser-dot bg-amber-400"></div>
+                <div class="browser-dot bg-emerald-400"></div>
+                <div class="browser-url">🔒 creactive-adventure.se</div>
+              </div>
+              <div class="video-scroll-viewport">
+                <div class="video-scroll-track">
+                  <img src="/thumbnails/creactive.png" alt="Creactive Adventure Real Live Site" class="w-full h-auto block" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 flex flex-col justify-between flex-1">
+            <div>
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="text-nordic-accent font-bold">[01]</span>
+                <span class="scandi-pill" data-i18n="proj1Pill">SEO & BOOKING</span>
+              </div>
+              <h3 class="font-bold text-2xl text-nordic-text mb-1" data-i18n="proj1Name">Creactive Adventure</h3>
+              <p class="text-xs text-nordic-muted mb-4 font-medium" data-i18n="proj1Cat">Upplevelser & Bokning</p>
+              <p class="text-xs text-nordic-muted leading-relaxed mb-6 font-normal" data-i18n="proj1Desc">
+                Moderne och inspirerande äventyrsportal med integrerat bokningssystem och hög konverteringsgrad.
+              </p>
+            </div>
+            <div class="flex items-center justify-between gap-2 border-t border-nordic-border pt-4">
+              <button data-quick-view class="text-xs font-semibold text-nordic-muted hover:text-nordic-text transition-colors" data-i18n="quickViewBtn">Läs Mer ⊕</button>
+              <a href="https://www.creactive-adventure.se/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-nordic-accent hover:underline flex items-center gap-1" data-i18n="viewProjectBtn">Besök Webbplats ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- [02] Tegneby Servicecenter -->
+        <div class="project-card scandi-card overflow-hidden flex flex-col justify-between" 
+             data-category="local seo"
+             data-name="Tegneby Servicecenter"
+             data-cat="Fordon & Bilverkstad"
+             data-desc="Auktoritativ digital närvaro för bilverkstad med fokus på trygghet, enkel tidsbokning och lokal SEO."
+             data-url="https://www.tegnebyservicecenter.se/"
+             data-img="/thumbnails/tegneby.png">
+          <div class="p-4 bg-slate-100 border-b border-nordic-border">
+            <div class="browser-window">
+              <div class="browser-header">
+                <div class="browser-dot bg-red-400"></div>
+                <div class="browser-dot bg-amber-400"></div>
+                <div class="browser-dot bg-emerald-400"></div>
+                <div class="browser-url">🔒 tegnebyservicecenter.se</div>
+              </div>
+              <div class="video-scroll-viewport">
+                <div class="video-scroll-track">
+                  <img src="/thumbnails/tegneby.png" alt="Tegneby Servicecenter Real Live Site" class="w-full h-auto block" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 flex flex-col justify-between flex-1">
+            <div>
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="text-nordic-accent font-bold">[02]</span>
+                <span class="scandi-pill" data-i18n="proj2Pill">LOCAL SEO</span>
+              </div>
+              <h3 class="font-bold text-2xl text-nordic-text mb-1" data-i18n="proj2Name">Tegneby Servicecenter</h3>
+              <p class="text-xs text-nordic-muted mb-4 font-medium" data-i18n="proj2Cat">Fordon & Bilverkstad</p>
+              <p class="text-xs text-nordic-muted leading-relaxed mb-6 font-normal" data-i18n="proj2Desc">
+                Auktoritativ digital närvaro för bilverkstad med fokus på trygghet, enkel tidsbokning och lokal SEO.
+              </p>
+            </div>
+            <div class="flex items-center justify-between gap-2 border-t border-nordic-border pt-4">
+              <button data-quick-view class="text-xs font-semibold text-nordic-muted hover:text-nordic-text transition-colors" data-i18n="quickViewBtn">Läs Mer ⊕</button>
+              <a href="https://www.tegnebyservicecenter.se/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-nordic-accent hover:underline flex items-center gap-1" data-i18n="viewProjectBtn">Besök Webbplats ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- [03] Bakehouse by PJ -->
+        <div class="project-card scandi-card overflow-hidden flex flex-col justify-between" 
+             data-category="brand local"
+             data-name="Bakehouse by PJ"
+             data-cat="Hantverksbageri & Kafé"
+             data-desc="Stilren och inbjudande varumärkessida för ett exklusivt bageri med digitala menyöversikter."
+             data-url="https://bakehousebypj.com/"
+             data-img="/thumbnails/bakehouse.png">
+          <div class="p-4 bg-slate-100 border-b border-nordic-border">
+            <div class="browser-window">
+              <div class="browser-header">
+                <div class="browser-dot bg-red-400"></div>
+                <div class="browser-dot bg-amber-400"></div>
+                <div class="browser-dot bg-emerald-400"></div>
+                <div class="browser-url">🔒 bakehousebypj.com</div>
+              </div>
+              <div class="video-scroll-viewport">
+                <div class="video-scroll-track">
+                  <img src="/thumbnails/bakehouse.png" alt="Bakehouse by PJ Real Live Site" class="w-full h-auto block" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 flex flex-col justify-between flex-1">
+            <div>
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="text-nordic-accent font-bold">[03]</span>
+                <span class="scandi-pill" data-i18n="proj3Pill">BRANDING</span>
+              </div>
+              <h3 class="font-bold text-2xl text-nordic-text mb-1" data-i18n="proj3Name">Bakehouse by PJ</h3>
+              <p class="text-xs text-nordic-muted mb-4 font-medium" data-i18n="proj3Cat">Hantverksbageri & Kafé</p>
+              <p class="text-xs text-nordic-muted leading-relaxed mb-6 font-normal" data-i18n="proj3Desc">
+                Stilren och inbjudande varumärkessida för ett exklusivt bageri med digitala menyöversikter.
+              </p>
+            </div>
+            <div class="flex items-center justify-between gap-2 border-t border-nordic-border pt-4">
+              <button data-quick-view class="text-xs font-semibold text-nordic-muted hover:text-nordic-text transition-colors" data-i18n="quickViewBtn">Läs Mer ⊕</button>
+              <a href="https://bakehousebypj.com/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-nordic-accent hover:underline flex items-center gap-1" data-i18n="viewProjectBtn">Besök Webbplats ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- [04] Qlaim -->
+        <div class="project-card scandi-card overflow-hidden flex flex-col justify-between" 
+             data-category="brand seo"
+             data-name="Qlaim"
+             data-cat="Digital Byrå & Strategi"
+             data-desc="Stilren och professionell byråportfölj med modern struktur och blixtsnabb prestanda."
+             data-url="https://qlaim.se/"
+             data-img="/thumbnails/qlaim.png">
+          <div class="p-4 bg-slate-100 border-b border-nordic-border">
+            <div class="browser-window">
+              <div class="browser-header">
+                <div class="browser-dot bg-red-400"></div>
+                <div class="browser-dot bg-amber-400"></div>
+                <div class="browser-dot bg-emerald-400"></div>
+                <div class="browser-url">🔒 qlaim.se</div>
+              </div>
+              <div class="video-scroll-viewport">
+                <div class="video-scroll-track">
+                  <img src="/thumbnails/qlaim.png" alt="Qlaim Real Live Site" class="w-full h-auto block" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 flex flex-col justify-between flex-1">
+            <div>
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="text-nordic-accent font-bold">[04]</span>
+                <span class="scandi-pill" data-i18n="proj4Pill">AGENCY TECH</span>
+              </div>
+              <h3 class="font-bold text-2xl text-nordic-text mb-1" data-i18n="proj4Name">Qlaim</h3>
+              <p class="text-xs text-nordic-muted mb-4 font-medium" data-i18n="proj4Cat">Digital Byrå & Strategi</p>
+              <p class="text-xs text-nordic-muted leading-relaxed mb-6 font-normal" data-i18n="proj4Desc">
+                Stilren och professionell byråportfölj med modern struktur och blixtsnabb prestanda.
+              </p>
+            </div>
+            <div class="flex items-center justify-between gap-2 border-t border-nordic-border pt-4">
+              <button data-quick-view class="text-xs font-semibold text-nordic-muted hover:text-nordic-text transition-colors" data-i18n="quickViewBtn">Läs Mer ⊕</button>
+              <a href="https://qlaim.se/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-nordic-accent hover:underline flex items-center gap-1" data-i18n="viewProjectBtn">Besök Webbplats ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- [05] KJ Mur & Puts -->
+        <div class="project-card scandi-card overflow-hidden flex flex-col justify-between" 
+             data-category="local seo"
+             data-name="KJ Mur & Puts"
+             data-cat="Bygg & Mureri"
+             data-desc="Förtroendegivande hemsida för murerispecialister som framhäver kvalitet och lokala kundreferenser."
+             data-url="https://kjmurochputs.se/"
+             data-img="/thumbnails/kjmur.png">
+          <div class="p-4 bg-slate-100 border-b border-nordic-border">
+            <div class="browser-window">
+              <div class="browser-header">
+                <div class="browser-dot bg-red-400"></div>
+                <div class="browser-dot bg-amber-400"></div>
+                <div class="browser-dot bg-emerald-400"></div>
+                <div class="browser-url">🔒 kjmurochputs.se</div>
+              </div>
+              <div class="video-scroll-viewport">
+                <div class="video-scroll-track">
+                  <img src="/thumbnails/kjmur.png" alt="KJ Mur & Puts Real Live Site" class="w-full h-auto block" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 flex flex-col justify-between flex-1">
+            <div>
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="text-nordic-accent font-bold">[05]</span>
+                <span class="scandi-pill" data-i18n="proj5Pill">CONSTRUCTION & SEO</span>
+              </div>
+              <h3 class="font-bold text-2xl text-nordic-text mb-1" data-i18n="proj5Name">KJ Mur & Puts</h3>
+              <p class="text-xs text-nordic-muted mb-4 font-medium" data-i18n="proj5Cat">Bygg & Mureri</p>
+              <p class="text-xs text-nordic-muted leading-relaxed mb-6 font-normal" data-i18n="proj5Desc">
+                Förtroendegivande hemsida för murerispecialister som framhäver kvalitet och lokala kundreferenser.
+              </p>
+            </div>
+            <div class="flex items-center justify-between gap-2 border-t border-nordic-border pt-4">
+              <button data-quick-view class="text-xs font-semibold text-nordic-muted hover:text-nordic-text transition-colors" data-i18n="quickViewBtn">Läs Mer ⊕</button>
+              <a href="https://kjmurochputs.se/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-nordic-accent hover:underline flex items-center gap-1" data-i18n="viewProjectBtn">Besök Webbplats ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- [06] Stenhuggeri Öland -->
+        <div class="project-card scandi-card overflow-hidden flex flex-col justify-between" 
+             data-category="brand local"
+             data-name="Stenhuggeri Öland"
+             data-cat="Kulturarv & Natursten"
+             data-desc="Tidlös och elegant varumärkessida för stenhuggeri på Öland som lyfter genuint hantverk."
+             data-url="http://stenhuggerioland.se/"
+             data-img="/thumbnails/stenhuggeri.png">
+          <div class="p-4 bg-slate-100 border-b border-nordic-border">
+            <div class="browser-window">
+              <div class="browser-header">
+                <div class="browser-dot bg-red-400"></div>
+                <div class="browser-dot bg-amber-400"></div>
+                <div class="browser-dot bg-emerald-400"></div>
+                <div class="browser-url">🔒 stenhuggerioland.se</div>
+              </div>
+              <div class="video-scroll-viewport">
+                <div class="video-scroll-track">
+                  <img src="/thumbnails/stenhuggeri.png" alt="Stenhuggeri Öland Real Live Site" class="w-full h-auto block" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 flex flex-col justify-between flex-1">
+            <div>
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="text-nordic-accent font-bold">[06]</span>
+                <span class="scandi-pill" data-i18n="proj6Pill">HERITAGE</span>
+              </div>
+              <h3 class="font-bold text-2xl text-nordic-text mb-1" data-i18n="proj6Name">Stenhuggeri Öland</h3>
+              <p class="text-xs text-nordic-muted mb-4 font-medium" data-i18n="proj6Cat">Kulturarv & Natursten</p>
+              <p class="text-xs text-nordic-muted leading-relaxed mb-6 font-normal" data-i18n="proj6Desc">
+                Tidlös och elegant varumärkessida för stenhuggeri på Öland som lyfter genuint hantverk.
+              </p>
+            </div>
+            <div class="flex items-center justify-between gap-2 border-t border-nordic-border pt-4">
+              <button data-quick-view class="text-xs font-semibold text-nordic-muted hover:text-nordic-text transition-colors" data-i18n="quickViewBtn">Läs Mer ⊕</button>
+              <a href="http://stenhuggerioland.se/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-nordic-accent hover:underline flex items-center gap-1" data-i18n="viewProjectBtn">Besök Webbplats ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- [07] Finja Schakt -->
+        <div class="project-card scandi-card overflow-hidden flex flex-col justify-between" 
+             data-category="local"
+             data-name="Finja Schakt"
+             data-cat="Mark- & Infrastruktur"
+             data-desc="Strukturerad och stabil företagssida för schaktarbeten och entreprenad med tydlig projektportfölj."
+             data-url="https://finjaschakt.se/"
+             data-img="/thumbnails/finja.png">
+          <div class="p-4 bg-slate-100 border-b border-nordic-border">
+            <div class="browser-window">
+              <div class="browser-header">
+                <div class="browser-dot bg-red-400"></div>
+                <div class="browser-dot bg-amber-400"></div>
+                <div class="browser-dot bg-emerald-400"></div>
+                <div class="browser-url">🔒 finjaschakt.se</div>
+              </div>
+              <div class="video-scroll-viewport">
+                <div class="video-scroll-track">
+                  <img src="/thumbnails/finja.png" alt="Finja Schakt Real Live Site" class="w-full h-auto block" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 flex flex-col justify-between flex-1">
+            <div>
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="text-nordic-accent font-bold">[07]</span>
+                <span class="scandi-pill" data-i18n="proj7Pill">CONTRACTING</span>
+              </div>
+              <h3 class="font-bold text-2xl text-nordic-text mb-1" data-i18n="proj7Name">Finja Schakt</h3>
+              <p class="text-xs text-nordic-muted mb-4 font-medium" data-i18n="proj7Cat">Mark- & Infrastruktur</p>
+              <p class="text-xs text-nordic-muted leading-relaxed mb-6 font-normal" data-i18n="proj7Desc">
+                Strukturerad och stabil företagssida för schaktarbeten och entreprenad med tydlig projektportfölj.
+              </p>
+            </div>
+            <div class="flex items-center justify-between gap-2 border-t border-nordic-border pt-4">
+              <button data-quick-view class="text-xs font-semibold text-nordic-muted hover:text-nordic-text transition-colors" data-i18n="quickViewBtn">Läs Mer ⊕</button>
+              <a href="https://finjaschakt.se/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-nordic-accent hover:underline flex items-center gap-1" data-i18n="viewProjectBtn">Besök Webbplats ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- [08] Stenläggning Trollhättan -->
+        <div class="project-card scandi-card overflow-hidden flex flex-col justify-between" 
+             data-category="seo local"
+             data-name="Stenläggning Trollhättan"
+             data-cat="Specialiserad Stenläggning (SEO)"
+             data-desc="Välstrukturerad SEO-plattform utformad för att driva inkommande förfrågningar i Trollhättan."
+             data-url="https://stenlaggning-trollhattan.se/"
+             data-img="/thumbnails/stenlaggning.png">
+          <div class="p-4 bg-slate-100 border-b border-nordic-border">
+            <div class="browser-window">
+              <div class="browser-header">
+                <div class="browser-dot bg-red-400"></div>
+                <div class="browser-dot bg-amber-400"></div>
+                <div class="browser-dot bg-emerald-400"></div>
+                <div class="browser-url">🔒 stenlaggning-trollhattan.se</div>
+              </div>
+              <div class="video-scroll-viewport">
+                <div class="video-scroll-track">
+                  <img src="/thumbnails/stenlaggning.png" alt="Stenläggning Trollhättan Real Live Site" class="w-full h-auto block" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 flex flex-col justify-between flex-1">
+            <div>
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="text-nordic-accent font-bold">[08]</span>
+                <span class="scandi-pill" data-i18n="proj8Pill">#1 GOOGLE RANK</span>
+              </div>
+              <h3 class="font-bold text-2xl text-nordic-text mb-1" data-i18n="proj8Name">Stenläggning Trollhättan</h3>
+              <p class="text-xs text-nordic-muted mb-4 font-medium" data-i18n="proj8Cat">Specialiserad Stenläggning (SEO)</p>
+              <p class="text-xs text-nordic-muted leading-relaxed mb-6 font-normal" data-i18n="proj8Desc">
+                Välstrukturerad SEO-plattform utformad för att driva inkommande förfrågningar i Trollhättan.
+              </p>
+            </div>
+            <div class="flex items-center justify-between gap-2 border-t border-nordic-border pt-4">
+              <button data-quick-view class="text-xs font-semibold text-nordic-muted hover:text-nordic-text transition-colors" data-i18n="quickViewBtn">Läs Mer ⊕</button>
+              <a href="https://stenlaggning-trollhattan.se/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-nordic-accent hover:underline flex items-center gap-1" data-i18n="viewProjectBtn">Besök Webbplats ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- [09] Markarbeten Uddevalla -->
+        <div class="project-card scandi-card overflow-hidden flex flex-col justify-between" 
+             data-category="seo local"
+             data-name="Markarbeten Uddevalla"
+             data-cat="Mark- & Entreprenad (SEO)"
+             data-desc="Optimerad landningsplattform för entreprenadtjänster i Uddevalla med fokus på relevanta sökord."
+             data-url="https://markarbeten-uddevalla.se/"
+             data-img="/thumbnails/markarbeten.png">
+          <div class="p-4 bg-slate-100 border-b border-nordic-border">
+            <div class="browser-window">
+              <div class="browser-header">
+                <div class="browser-dot bg-red-400"></div>
+                <div class="browser-dot bg-amber-400"></div>
+                <div class="browser-dot bg-emerald-400"></div>
+                <div class="browser-url">🔒 markarbeten-uddevalla.se</div>
+              </div>
+              <div class="video-scroll-viewport">
+                <div class="video-scroll-track">
+                  <img src="/thumbnails/markarbeten.png" alt="Markarbeten Uddevalla Real Live Site" class="w-full h-auto block" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 flex flex-col justify-between flex-1">
+            <div>
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="text-nordic-accent font-bold">[09]</span>
+                <span class="scandi-pill" data-i18n="proj9Pill">KEYWORD ENGINE</span>
+              </div>
+              <h3 class="font-bold text-2xl text-nordic-text mb-1" data-i18n="proj9Name">Markarbeten Uddevalla</h3>
+              <p class="text-xs text-nordic-muted mb-4 font-medium" data-i18n="proj9Cat">Mark- & Entreprenad (SEO)</p>
+              <p class="text-xs text-nordic-muted leading-relaxed mb-6 font-normal" data-i18n="proj9Desc">
+                Optimerad landningsplattform för entreprenadtjänster i Uddevalla med fokus på relevanta sökord.
+              </p>
+            </div>
+            <div class="flex items-center justify-between gap-2 border-t border-nordic-border pt-4">
+              <button data-quick-view class="text-xs font-semibold text-nordic-muted hover:text-nordic-text transition-colors" data-i18n="quickViewBtn">Läs Mer ⊕</button>
+              <a href="https://markarbeten-uddevalla.se/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-nordic-accent hover:underline flex items-center gap-1" data-i18n="viewProjectBtn">Besök Webbplats ↗</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT & CREATIVE PROCESS SECTION -->
+    <section id="about" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+      <div class="scandi-card p-8 sm:p-12 relative overflow-hidden bg-white border border-slate-200">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          
+          <!-- Isac Portrait Photo Column -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-white/80 bg-slate-100 group">
+              <img src="/images/isac-portrait.jpg" alt="Isac Designs - Web Architect & Technical SEO Specialist" class="w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-105 block" />
+            </div>
+          </div>
+
+          <!-- Creative Philosophy Column -->
+          <div class="lg:col-span-7">
+            <div class="text-xs font-bold text-nordic-accent tracking-wider uppercase mb-2" data-i18n="aboutBadge">// CREATIVE CRAFTSMANSHIP & BESPOKE DESIGN</div>
+            <h2 class="font-extrabold text-3xl sm:text-5xl text-nordic-text tracking-tight mb-6 leading-tight" data-i18n="aboutTitle">
+              CREATIVE DESIGN & BESPOKE DIGITAL SOLUTIONS
+            </h2>
+            <p class="text-nordic-text text-base sm:text-lg leading-relaxed mb-4 font-medium" data-i18n="aboutIntro">
+              I work with a strong creative focus and tailor every single website specifically to your business's unique needs, goals, and brand identity.
+            </p>
+            <p class="text-nordic-muted text-sm sm:text-base leading-relaxed mb-8 font-normal" data-i18n="aboutDesc">
+              Every project is engineered from scratch without restrictive templates. Based in Spain and serving ambitious businesses across Europe, I combine high-end aesthetics, seamless user experience, and technical SEO to build a secure, high-performing digital platform that converts visitors into loyal clients.
+            </p>
+
+            <!-- Key Pillars List -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-nordic-border pt-6">
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-slate-100 text-slate-900 font-bold flex items-center justify-center shrink-0 border border-slate-200">
+                  <svg class="w-4 h-4 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-nordic-text" data-i18n="aboutPillar1Title">Creative & Unique Form</h4>
+                  <p class="text-xs text-nordic-muted" data-i18n="aboutPillar1Desc">Custom-designed to match your vision without generic template limits.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-slate-100 text-slate-900 font-bold flex items-center justify-center shrink-0 border border-slate-200">
+                  <svg class="w-4 h-4 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <circle cx="12" cy="12" r="9" />
+                    <circle cx="12" cy="12" r="5" />
+                    <circle cx="12" cy="12" r="1.5" fill="currentColor" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-nordic-text" data-i18n="aboutPillar2Title">Tailored Functionality</h4>
+                  <p class="text-xs text-nordic-muted" data-i18n="aboutPillar2Desc">Engineered specifically for your customer journey and growth goals.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+      
+      <div class="mb-16">
+        <div class="text-xs font-bold text-nordic-accent tracking-wider uppercase mb-2" data-i18n="contactBadge">// START COLLABORATION</div>
+        <h2 class="font-extrabold text-4xl sm:text-6xl text-nordic-text tracking-tight max-w-4xl" data-i18n="contactTitle">
+          REDO ATT SKALA DITT FÖRETAG OCH DOMINERA DITT OMRÅDE?
+        </h2>
+        <p class="text-nordic-muted text-lg max-w-xl mt-4 font-normal" data-i18n="contactSubtitle">
+          Låt oss diskutera dina mål och skapa en lösning som ger konkreta resultat.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Contact Form -->
+        <div class="lg:col-span-7 scandi-card p-8 sm:p-10">
+          <form id="contact-form" class="space-y-6">
+            <div>
+              <label class="text-xs font-semibold text-nordic-muted uppercase block mb-2" data-i18n="contactFormName">YOUR NAME / COMPANY</label>
+              <input type="text" required class="w-full bg-slate-50 border border-nordic-border rounded-xl p-4 text-sm text-nordic-text focus:border-nordic-accent focus:bg-white focus:outline-none transition-colors" data-i18n="contactFormNamePlaceholder" placeholder="Company Ltd / Your Name">
+            </div>
+
+            <div>
+              <label class="text-xs font-semibold text-nordic-muted uppercase block mb-2" data-i18n="contactFormEmail">YOUR EMAIL ADDRESS</label>
+              <input type="email" required class="w-full bg-slate-50 border border-nordic-border rounded-xl p-4 text-sm text-nordic-text focus:border-nordic-accent focus:bg-white focus:outline-none transition-colors" data-i18n="contactFormEmailPlaceholder" placeholder="name@company.com">
+            </div>
+
+            <div>
+              <label class="text-xs font-semibold text-nordic-muted uppercase block mb-2" data-i18n="contactFormService">HOW CAN I HELP YOU?</label>
+              <select class="w-full bg-slate-50 border border-nordic-border rounded-xl p-4 text-sm text-nordic-text focus:border-nordic-accent focus:bg-white focus:outline-none transition-colors">
+                <option data-i18n="optService1">Bespoke Website & Design</option>
+                <option data-i18n="optService2">Technical SEO & Search Optimization</option>
+                <option data-i18n="optService3">Headless CMS & Performance</option>
+                <option data-i18n="optService4">End-to-End Solution & Advisory</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="text-xs font-semibold text-nordic-muted uppercase block mb-2" data-i18n="contactFormMessage">PROJECT DETAILS</label>
+              <textarea rows="4" required class="w-full bg-slate-50 border border-nordic-border rounded-xl p-4 text-sm text-nordic-text focus:border-nordic-accent focus:bg-white focus:outline-none transition-colors" data-i18n="contactFormMessagePlaceholder" placeholder="Describe your project goals and requirements..."></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-4 bg-nordic-accent hover:bg-nordic-accent-hover text-white font-bold text-sm tracking-wide rounded-xl shadow-lg shadow-blue-500/20 transition-all" data-magnetic="true">
+              <span data-i18n="contactSubmitBtn">SKICKA FÖRFRÅGAN</span>
+            </button>
+          </form>
+
+          <div id="form-success-msg" class="hidden mt-4 p-4 bg-blue-50 border border-blue-200 text-nordic-accent rounded-xl text-xs font-semibold">
+            ✓ Tack för ditt meddelande. Jag återkommer till dig inom 24 timmar.
+          </div>
+        </div>
+
+        <!-- Direct Info & Timezone Widget -->
+        <div class="lg:col-span-5 flex flex-col justify-between space-y-6">
+          
+          <div class="scandi-card p-8">
+            <h4 class="text-xs font-semibold text-nordic-muted uppercase mb-3" data-i18n="emailCopyTitle">DIRECT EMAIL</h4>
+            <button id="copy-email-btn" class="w-full py-4 bg-slate-50 border border-nordic-border hover:border-nordic-accent rounded-xl text-nordic-text font-semibold text-sm tracking-wide flex items-center justify-between px-6 transition-all group" data-magnetic="true">
+              <span>isacmirestrand@gmail.com</span>
+              <span class="text-nordic-accent group-hover:scale-105 transition-transform" data-i18n="copyBtn">COPY ⎘</span>
+            </button>
+          </div>
+
+          <div class="scandi-card p-8">
+            <div class="text-xs font-semibold text-nordic-muted uppercase mb-2" data-i18n="localTimeLabel">LOCAL TIME:</div>
+            <div id="live-clock" class="font-bold text-3xl text-nordic-text">00:00:00 CET</div>
+            <div class="text-xs text-nordic-muted mt-2 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-nordic-emerald"></span>
+              <span data-i18n="navStatus">AVAILABLE FOR NEW PROJECTS 2026</span>
+            </div>
+          </div>
+
+          <div class="scandi-card p-8 flex items-center justify-between">
+            <span class="text-xs font-medium text-nordic-muted">ISAC DESIGNS</span>
+            <button id="scroll-top-btn" class="text-xs font-bold text-nordic-accent hover:underline" data-i18n="scrollTopBtn">TILL TOPPEN ↑</button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-nordic-border py-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full text-xs text-nordic-muted flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2.5">
+        <span class="text-nordic-text font-bold font-syne">ISAC DESIGNS</span>
+        <span>© 2026</span>
+      </div>
+      <div data-i18n="rightsReserved">
+        © 2026 ISAC DESIGNS • ALLA RÄTTIGHETER RESEVERADE
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Project Quick View Modal -->
+  <div id="project-modal" class="fixed inset-0 z-[20000] bg-slate-900/60 backdrop-blur-md flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300 ease-out">
+    <div id="modal-card" class="bg-white max-w-2xl w-full p-8 border border-nordic-border relative rounded-2xl shadow-2xl transform scale-95 transition-all duration-300 ease-out">
+      <button id="modal-close" class="absolute top-4 right-4 text-nordic-muted hover:text-nordic-text text-xl font-bold">✕</button>
+      <div class="text-xs font-bold text-nordic-accent mb-2 uppercase" id="modal-category">KATEGORI</div>
+      <h3 class="font-bold text-3xl text-nordic-text mb-4" id="modal-title">PROJEKTTITEL</h3>
+      
+      <!-- Modal Preview Image -->
+      <div class="browser-window mb-6">
+        <div class="browser-header">
+          <div class="browser-dot bg-red-400"></div>
+          <div class="browser-dot bg-amber-400"></div>
+          <div class="browser-dot bg-emerald-400"></div>
+        </div>
+        <div class="h-48 overflow-hidden">
+          <img id="modal-img" src="" alt="Modal Preview" class="w-full h-auto object-top" />
+        </div>
+      </div>
+
+      <p class="text-nordic-muted text-sm leading-relaxed mb-6 font-normal" id="modal-desc">PROJEKTBESKRIVNING</p>
+      <div class="flex justify-end gap-4">
+        <a id="modal-link" href="#" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-nordic-accent hover:bg-nordic-accent-hover text-white font-bold text-xs rounded-xl uppercase transition-colors">
+          Besök Webbplats ↗
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/scripts/main.js"></script>
+</body>
+</html>
