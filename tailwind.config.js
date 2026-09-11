@@ -15,8 +15,8 @@ export default {
           'border-dark': '#cbd5e1',
           text: '#0f172a',
           muted: '#475569',
-          accent: '#16a34a',
-          'accent-hover': '#15803d',
+          accent: '#22c55e',
+          'accent-hover': '#16a34a',
           emerald: '#059669',
         }
       },
