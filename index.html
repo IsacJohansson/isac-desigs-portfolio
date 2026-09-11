@@ -32,60 +32,17 @@
   <div id="page-preloader" class="fixed inset-0 z-[99999] bg-white flex flex-col items-center justify-center transition-opacity duration-800 overflow-hidden">
     
     <!-- Background image to match theme -->
-    <img src="/images/hero-bg-colorful.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-50 mix-blend-multiply pointer-events-none" />
-    <div class="absolute inset-0 bg-gradient-to-t from-white/90 via-white/50 to-white/90 pointer-events-none"></div>
+    <img src="/images/hero-bg-colorful.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-100 pointer-events-none" />
+    <div class="absolute inset-0 bg-white/40 backdrop-blur-md pointer-events-none"></div>
 
     <!-- Ambient Particles Canvas for Preloader -->
     <canvas id="preloader-canvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-60"></canvas>
     
     <div class="relative flex flex-col items-center z-10">
       
-      <!-- Animated Growing Tree Container -->
-      <div class="relative w-56 h-56 mb-2 flex items-center justify-center">
-        <!-- SVG Organic Growing Tree -->
-        <svg id="growing-tree-svg" class="w-full h-full text-slate-900" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-          
-          <!-- Pot / Base -->
-          <path class="tree-pot" d="M78 172 L122 172 L126 156 L74 156 Z" fill="#0f172a" stroke="none" />
-          
-          <!-- Main Trunk -->
-          <path class="tree-branch trunk" d="M100 156 C100 130 98 110 100 78" stroke-width="4.5" />
-          
-          <!-- Left Primary Branch -->
-          <path class="tree-branch branch-1" d="M100 122 C84 106 68 100 52 84" stroke-width="3.2" />
-          <!-- Left Secondary Branch -->
-          <path class="tree-branch branch-2" d="M70 96 C58 82 46 80 34 68" stroke-width="2.2" />
-          <!-- Left Top Branch -->
-          <path class="tree-branch branch-3" d="M100 96 C86 80 72 68 62 48" stroke-width="2.5" />
-
-          <!-- Right Primary Branch -->
-          <path class="tree-branch branch-4" d="M100 118 C116 102 132 96 148 80" stroke-width="3.2" />
-          <!-- Right Secondary Branch -->
-          <path class="tree-branch branch-5" d="M128 92 C140 78 152 75 164 64" stroke-width="2.2" />
-          <!-- Right Top Branch -->
-          <path class="tree-branch branch-6" d="M100 90 C114 74 128 64 138 44" stroke-width="2.5" />
-
-          <!-- Top Sprout Branch -->
-          <path class="tree-branch branch-7" d="M100 78 C98 58 102 42 100 26" stroke-width="3" />
-
-          <!-- Unfolding Leaves (Animated Scale & Elastic Flourish) -->
-          <g class="tree-leaves" fill="#0f172a">
-            <!-- Left Leaves -->
-            <path class="leaf leaf-1" d="M52 84 C38 78 30 65 42 56 C52 56 56 68 52 84 Z" />
-            <path class="leaf leaf-2" d="M34 68 C20 62 14 52 24 44 C34 44 38 54 34 68 Z" />
-            <path class="leaf leaf-3" d="M62 48 C48 40 42 28 54 21 C64 22 68 34 62 48 Z" />
-
-            <!-- Right Leaves -->
-            <path class="leaf leaf-4" d="M148 80 C162 74 170 61 158 53 C148 53 144 65 148 80 Z" />
-            <path class="leaf leaf-5" d="M164 64 C178 58 184 48 174 40 C164 40 160 50 164 64 Z" />
-            <path class="leaf leaf-6" d="M138 44 C152 36 156 24 144 17 C134 18 132 30 138 44 Z" />
-
-            <!-- Top Center Leaves -->
-            <path class="leaf leaf-7" d="M100 26 C86 16 88 4 100 0 C112 4 114 16 100 26 Z" />
-            <path class="leaf leaf-8" d="M100 54 C84 44 80 30 95 26 C105 28 108 40 100 54 Z" />
-          </g>
-
-        </svg>
+      <!-- Preloader Icon -->
+      <div class="relative w-36 h-36 mb-4 flex items-center justify-center">
+        <img src="/images/preloader-icon.jpg" alt="Loading" class="w-full h-full object-contain mix-blend-multiply opacity-95 animate-pulse" />
       </div>
 
       <!-- Typography -->
